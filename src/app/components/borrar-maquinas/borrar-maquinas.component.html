@@ -1,0 +1,20 @@
+<div>
+  <div class="alert alert-dark" role="alert">
+    {{ titulo }}
+  </div>
+  <div>
+    <form class="center" *ngIf="maq">
+      <div class="form-row">
+        <div class="form-group col-md-5">
+          <label for="inputNombre">Nombre: {{ maq.nombre }}</label>
+        </div>
+      </div>
+      <div>
+        <br>
+        <button type="button" class="btn btn-warning" (click)="borrar()">Confirmar</button>
+        <button type="button" class="btn btn-primary" routerLink="/lista-maquinas">Cancelar</button>
+      </div>
+    </form>
+  </div>
+</div>
+

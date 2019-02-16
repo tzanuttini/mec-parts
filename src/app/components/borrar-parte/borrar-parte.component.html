@@ -1,0 +1,27 @@
+<div>
+  <div class="alert alert-dark" role="alert">
+    {{ titulo }}
+  </div>
+  <div>
+    <form class="center" *ngIf="part">
+      <div class="form-row">
+        <div class="form-group col-md-1">
+          <label for="inputCodigo">Código: {{ part.codigo }}</label>
+        </div>
+        <div class="form-group col-md-3">
+          <label for="inputNombre">Nombre: {{ part.nombre }}</label>
+        </div>
+      </div>
+      <div>
+        <div class="form-row">
+          <div class="form-group col-md-5">
+            <label for="inputDescripcion">Descripción: {{ part.descripcion }}</label>
+          </div>
+        </div>
+        <br>
+        <button type="button" class="btn btn-warning" (click)="borrar()">Confirmar</button>
+        <button type="button" class="btn btn-primary" routerLink="/lista-partes">Cancelar</button>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,44 @@
+<div>
+  <div class="alert alert-dark" role="alert">
+    {{ titulo }}
+  </div>
+  <div *ngIf="part">
+    <form class="center" #partForm="ngForm">
+
+      <div class="form-row">
+        <div class="form-group col-md-2">
+          <label for="inputCodigo">Código</label>
+          <input type="text" class="form-control" name="codigo" required min="1" [(ngModel)]="part.codigo" placeholder="Código...">
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-md-3">
+          <label for="inputNombre">Nombre</label>
+          <input type="text" class="form-control" name="nombre" [(ngModel)]="part.nombre" placeholder="Nombre...">
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-md-4">
+          <label for="inputDescripcion">Descripción</label>
+          <input type="text" class="form-control" name="descripcion" [(ngModel)]="part.descripcion" placeholder="Descripción...">
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-md-4">
+        <label for="inputActiva">Activada</label>
+        <br>
+          <ui-switch labelOn="Sí" labelOff="No" [(ngModel)]="part.activa" name="activa"></ui-switch>
+        </div>
+      </div>
+
+      <div>
+        <br>
+        <button type="submit" class="btn btn-primary" (click)="confirmado()" [disabled]="!partForm.form.valid">Aceptar</button>
+        <button type="button" class="btn btn-primary" routerLink="/lista-partes">Cancelar</button>
+      </div>
+    </form>
+  </div>
+</div>
