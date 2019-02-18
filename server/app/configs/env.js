@@ -1,7 +1,7 @@
 // mis variables de ambiente 
 const env = {
   // para el express
-  listenOn: 'localhost',
+  listenOn: '0.0.0.0',
   puerto: 3000,
   // para el postgres
   database: 'Mecparts',
